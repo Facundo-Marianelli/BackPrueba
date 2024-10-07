@@ -34,5 +34,5 @@ jobs:
           export SERVICE="${{ secrets.SERVICE }}"
           export PORT="${{ secrets.PORT }}"
           npm install
-          npm start
+          nohup npm start &> output.log &
         EOF
